@@ -1,0 +1,644 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #3d3035;
+    background: #fff9fb;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    background: rgba(255, 249, 251, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 18px 0;
+    box-shadow: 0 2px 15px rgba(90, 60, 70, 0.05);
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-family: 'DM Serif Display', serif;
+    font-size: 30px;
+    color: #4b3540;
+}
+
+.navbar-brand span {
+    color: #c9859d;
+}
+
+.nav-link {
+    color: #5e4b53;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #c47f99;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(225, 170, 190, 0.25),
+            transparent 30%
+        ),
+        #fff9fb;
+}
+
+.hero-text {
+    padding-top: 50px;
+}
+
+.small-title {
+    color: #c47f99;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 65px;
+    color: #45343b;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #c47f99;
+}
+
+.hero-description {
+    max-width: 550px;
+    line-height: 1.9;
+    color: #76656c;
+    font-size: 15px;
+}
+
+.hero-description strong {
+    color: #bd718d;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn-main {
+    background: #c9859d;
+    color: white;
+    padding: 12px 23px;
+    border-radius: 30px;
+    border: 1px solid #c9859d;
+    transition: 0.3s;
+}
+
+.btn-main:hover {
+    background: #b86f8a;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-main {
+    color: #b86f8a;
+    border: 1px solid #c9859d;
+    padding: 12px 23px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-outline-main:hover {
+    background: #c9859d;
+    color: white;
+}
+
+
+/* =========================
+   SOCIAL MEDIA
+========================= */
+
+.social-icons {
+    display: flex;
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #b86f8a;
+    background: #f8e8ee;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #c9859d;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.hero-image {
+    padding-top: 60px;
+}
+
+.profile-wrapper {
+    position: relative;
+    width: 390px;
+    height: 390px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-decoration {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: #f5dce5;
+    z-index: 0;
+}
+
+.profile-img {
+    position: relative;
+    z-index: 1;
+    width: 310px;
+    height: 310px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid white;
+    box-shadow: 0 15px 40px rgba(100, 60, 75, 0.15);
+}
+
+
+/* =========================
+   FLOATING CARD
+========================= */
+
+.floating-card {
+    position: absolute;
+    z-index: 2;
+    background: white;
+    padding: 12px 18px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(80, 50, 60, 0.12);
+    font-size: 13px;
+    font-weight: 500;
+    color: #55424a;
+}
+
+.floating-card i {
+    color: #c9859d;
+    margin-right: 5px;
+}
+
+.card-one {
+    top: 65px;
+    left: 5px;
+}
+
+.card-two {
+    bottom: 60px;
+    right: 0;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title p {
+    color: #c47f99;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.section-title h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 45px;
+    color: #45343b;
+}
+
+.section-title h2 span {
+    color: #c47f99;
+}
+
+.title-line {
+    width: 55px;
+    height: 3px;
+    background: #c9859d;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.about-card {
+    background: #fff4f7;
+    padding: 45px;
+    border-radius: 25px;
+    text-align: center;
+    border: 1px solid #f5e0e7;
+}
+
+.about-card > i {
+    font-size: 45px;
+    color: #c9859d;
+}
+
+.about-card h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+.about-card p {
+    color: #76656c;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.about-text {
+    padding-left: 30px;
+}
+
+.about-text p {
+    color: #76656c;
+    line-height: 1.9;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.about-text strong {
+    color: #bd718d;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.skills span {
+    background: #f8e8ee;
+    color: #a8647d;
+    padding: 9px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.skills i {
+    margin-right: 5px;
+}
+
+
+/* =========================
+   PROJECT
+========================= */
+
+.project-section {
+    padding: 100px 0;
+    background: #fff9fb;
+}
+
+.project-card {
+    height: 100%;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #f3e2e8;
+    box-shadow: 0 8px 25px rgba(80, 50, 60, 0.06);
+    transition: 0.35s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(80, 50, 60, 0.13);
+}
+
+
+/* =========================
+   PROJECT IMAGE
+========================= */
+
+.project-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.06);
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(110, 65, 80, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay i {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: white;
+    color: #c47f99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+}
+
+
+/* =========================
+   PROJECT CONTENT
+========================= */
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content > span {
+    color: #c47f99;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.project-content h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 27px;
+    color: #46363d;
+    margin: 7px 0 10px;
+}
+
+.project-content p {
+    color: #786970;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.project-content a {
+    color: #b86f8a;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.project-content a i {
+    margin-left: 5px;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal-content {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fffafd;
+}
+
+.modal-header {
+    padding: 25px 30px;
+    border-bottom: 1px solid #f1dfe6;
+    background: #fff7fa;
+}
+
+.modal-header p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #c47f99 !important;
+    font-weight: 600;
+}
+
+.modal-title {
+    font-family: 'DM Serif Display', serif;
+    color: #46363d;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-body img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-body img:hover {
+    transform: scale(1.02);
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    padding: 100px 0;
+    background: white;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 991px) {
+
+    .navbar {
+        padding: 13px 0;
+    }
+
+    .navbar-nav {
+        padding-top: 15px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .hero {
+        padding-top: 90px;
+    }
+
+    .hero-text {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .hero-description {
+        margin: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        margin-top: 40px;
+    }
+
+    .about-text {
+        padding-left: 0;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .profile-wrapper {
+        width: 300px;
+        height: 300px;
+    }
+
+    .circle-decoration {
+        width: 270px;
+        height: 270px;
+    }
+
+    .profile-img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .floating-card {
+        font-size: 10px;
+        padding: 9px 12px;
+    }
+
+    .card-one {
+        left: -5px;
+        top: 35px;
+    }
+
+    .card-two {
+        right: -5px;
+        bottom: 35px;
+    }
+
+    .section-title h2 {
+        font-size: 38px;
+    }
+
+    .about-section,
+    .project-section,
+    .contact-section {
+        padding: 75px 0;
+    }
+
+    .about-card {
+        padding: 30px 20px;
+    }
+
+    .project-image {
+        height: 230px;
+    }
+
+    .modal-body {
+        padding: 15px;
+    }
+
+    .modal-body img {
+        height: 250px;
+    }
+
+}
